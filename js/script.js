@@ -1,5 +1,5 @@
 // Create variables of HTML elements
-const temp = document.querySelector(".current-temp");
+const temperature = document.querySelector(".current-temp");
 const humidity = document.querySelector(".current-humidity");
 const wind = document.querySelector(".current-wind");
 
@@ -27,7 +27,7 @@ fetch(
       result.current.wind_speed_10m + result.current_units.wind_speed_10m;
 
     // Below assigns the html elements which the user sees, to the received variables above.
-    temp.textContent = currentTemp;
+    temperature.textContent = currentTemp;
     humidity.textContent = currentHumidity;
     wind.textContent = currentWindSpeed;
   });
