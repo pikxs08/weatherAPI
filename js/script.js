@@ -10,14 +10,23 @@ fetch(
 )
   .then((res) => res.json())
   .then((result) => {
+    // Below is showing the developer the data being returned
     console.log(result);
+
+    // below variable assigns current temperature received
     let currentTemp =
       result.current.temperature_2m + result.current_units.temperature_2m;
+
+    // below variable assigns current humidity received
     let currentHumidity =
       result.current.relative_humidity_2m +
       result.current_units.relative_humidity_2m;
+
+    // below variable assigns current wind speed received
     let currentWindSpeed =
       result.current.wind_speed_10m + result.current_units.wind_speed_10m;
+
+    // Below assigns the html elements which the user sees, to the received variables above.
     temp.textContent = currentTemp;
     humidity.textContent = currentHumidity;
     wind.textContent = currentWindSpeed;
